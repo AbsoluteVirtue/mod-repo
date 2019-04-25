@@ -41,20 +41,20 @@ class cfgVehicles
 		selectionFireAnim = "zasleh";
 		soundIndex = 1;
 		muzzlePos = "usti hlavne";
-		barrelArmor = 600;
+		barrelArmor = 60000;
 		recoilModifier[] = {1,1,1};
 		isMeleeWeapon = 1;
 	};
-	class OSS_Suppressor: ItemSuppressor
+	class TrekSuppressor: ItemSuppressor
 	{
 		scope = 2;
-		displayName = "$STR_cfgVehicles_PistolSuppressor0";
+		displayName = "Gemtech Rifle Suppressor";
 		descriptionShort = "$STR_cfgVehicles_PistolSuppressor1";
 		model = "\dz\weapons\attachments\muzzle\suppressor_45acp.p3d";
 		rotationFlags = 17;
 		reversed = 0;
 		weight = 100;
-		itemSize[] = {1,3};
+		itemSize[] = {3,1};
 		lootCategory = "Attachments";
 		lootTag[] = {"Military_east","Military_west","Police","Civilian"};
 		inventorySlot = "suppressorImpro";
