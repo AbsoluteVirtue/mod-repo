@@ -38,7 +38,7 @@ class CfgVehicles
 		model = "\DZ\characters\belts\belt_leather_g.p3d";
 		vehicleClass = "Clothing";
 		simulation = "clothing";
-		attachments[] = {"VestPouch", "VestHolster", "VestBackpack", "Knife"};
+		attachments[] = {"VestHolster", "VestBackpack", "Knife"};
 		inventorySlot = "Hips";
 		itemInfo[] = {"Clothing","Hips"};
 		itemSize[] = {3,2};
@@ -73,8 +73,8 @@ class CfgVehicles
 	class ThreePointSling: Clothing
 	{
 		scope=2;
-		displayName="$STR_CfgVehicles_ChestHolster0";
-		descriptionShort="$STR_CfgVehicles_ChestHolster1";
+		displayName="Weapon Sling";
+		descriptionShort="Three-point sling to have primary weapons close at hand.";
 		model="\DZ\characters\vests\chest_holster_g.p3d";
 		inventorySlot="Bow";
 		simulation="clothing";
@@ -86,14 +86,11 @@ class CfgVehicles
 		};
 		attachments[]=
 		{
-			"Rifles"
+			"Shoulder"
 		};
-		weight=310;
-		itemSize[]={3,2};
-		absorbency=0.1;
-		heatIsolation=0.1;
-		repairableWithKits[]={5,3};
-		repairCosts[]={30,25};
+		quickBarBonus = 1;
+		weight=30;
+		itemSize[]={3,1};
 		class ClothingTypes
 		{
 			male="\DZ\characters\vests\chest_holster_m.p3d";
