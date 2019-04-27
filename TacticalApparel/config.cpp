@@ -70,19 +70,19 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\dz\characters\belts\data\belt_leather_co.paa","\dz\characters\belts\data\belt_leather_co.paa","\dz\characters\belts\data\belt_leather_co.paa"};
 		hiddenSelectionsMaterials[] = {"DZ\characters\belts\data\belt_leather_beige.rvmat","DZ\characters\belts\data\belt_leather_beige.rvmat","DZ\characters\belts\data\belt_leather_beige.rvmat"};
 	};
-	class ThreePointSling: Clothing
+	class ThreePointSling_Base: Clothing
 	{
-		scope=2;
 		displayName="Weapon Sling";
 		descriptionShort="Three-point sling to have primary weapons close at hand.";
-		model="\DZ\characters\vests\chest_holster_g.p3d";
+		model="\DZ\characters\tops\armbend_g.p3d";
 		inventorySlot="Bow";
 		simulation="clothing";
 		vehicleClass="Clothing";
 		itemInfo[]=
 		{
 			"Clothing",
-			"Bow"
+			"Armband"
+			//"Bow"
 		};
 		attachments[]=
 		{
@@ -91,79 +91,18 @@ class CfgVehicles
 		quickBarBonus = 1;
 		weight=30;
 		itemSize[]={3,1};
+		hiddenSelections[] = {"camoGround","camoMale","camoFemale","camoMaleBig","camoFemaleBig"};
 		class ClothingTypes
 		{
-			male="\DZ\characters\vests\chest_holster_m.p3d";
-			female="\DZ\characters\vests\chest_holster_f.p3d";
+			male = "\DZ\characters\tops\armbend_dynamic_m.p3d";
+			female = "\DZ\characters\tops\armbend_dynamic_f.p3d";
 		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=500;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"DZ\characters\vests\data\chest_holster.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"DZ\characters\vests\data\chest_holster.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"DZ\characters\vests\data\chest_holster_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"DZ\characters\vests\data\chest_holster_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"DZ\characters\vests\data\chest_holster_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
-		class AnimEvents
-		{
-			class SoundWeapon
-			{
-				class pickUpItem
-				{
-					soundSet="SmershVest_pickup_SoundSet";
-					id=797;
-				};
-				class drop
-				{
-					soundset="SmershVest_drop_SoundSet";
-					id=898;
-				};
-			};
-		};
+	};
+	class ThreePointSling_Black: ThreePointSling_Base
+	{
+		scope = 1;
+		//visibilityModifier = 0.7;
+		color = "Dyed";
+		hiddenSelectionsTextures[] = {"","","","",""};
 	};
 };
